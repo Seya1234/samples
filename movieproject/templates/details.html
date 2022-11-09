@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class = "container">
+    <div class = "row">
+        <div class = "col-md-6">
+            <br><br><br><br><br><img src = "{{m_key.img.url}}" width="500" height="250">
+        </div>
+        <div class = "col-md-6">
+            <h4>{{m_key.name}}</h4><br>
+            <h5>{{m_key.year}}</h5><br>
+            <h8><i>{{m_key.desc}}</i></h8><br><br>
+            <a class = "btn btn-warning" href="{% url 'movieapp:update' m_key.id %}">click here to update</a>
+            <a class = "btn btn-danger" href="{% url 'movieapp:delete' m_key.id %}">click here to delete</a>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+<!--{{m_key.name}}<br>-->
+<!--{{m_key.year}}<br>-->
+
+<!--{{m_key.desc}}<br>-->
+<!--<a class = "btn btn-warning" href="{% url 'movieapp:update' m_key.id %}">click here to update</a>-->
+<!--<a class = "btn btn-danger" href="{% url 'movieapp:delete' m_key.id %}">click here to delete</a>-->
